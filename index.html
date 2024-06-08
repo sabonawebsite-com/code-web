@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>myfirst_web</title>
+  <title>Document</title>
 </head>
 <style>
   img {
@@ -37,29 +37,11 @@
   button:hover {
     background: rgb(0, 255, 115);
   }
-    form {
-    margin: auto;
-    background-color: aquamarine;
-    border-radius: 30px;
-    width: 300px;
-    height: 300px;
-    text-align: center;
-    margin-bottom: 10px;
-  }
 </style>
 
 <body>
-  <form action="">
-    <label for="name">Name</label><br>
-    <input type="text" id="Name"><br>
-    <label for="password">password</label><br>
-    <input type="password" id="password"><br>
-    <label for="email">email</label><br>
-    <input type="email" id="email"><br>
-    <label for="phone">phone Number</label><br>
-    <input type="tel" id="phone"><br>
-    <button type="submit">send</button>
-  </form>
+
+  <button class="button1" onclick="doSub()">subscribe</button>
   <div>
     <h1>gaba-roobi</h1>
   </div>
@@ -94,7 +76,11 @@
       </fieldset><br>
     </ul>
   </div>
-<p>you are done very good job</p>
+  <script>
+    function doSub() {
+      document.querySelector(".button1").innerHTML = "subscribed";
+    }
+  </script>
 </body>
 
 </html>
