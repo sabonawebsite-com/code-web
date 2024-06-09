@@ -87,8 +87,45 @@ playgame()
     </ul>
   </div>
   <script>
-   function doSub() {
-      document.querySelector(".button1").innerHTML = "subscribed";
+    function doSub() {
+      let minmumNu = 1;
+      let maxNum = 15;
+      let answer = Math.floor(Math.random() * (maxNum - minmumNu + 1)) + minmumNu;
+
+      let attempts = 0
+      let gusse;
+      let running = true
+      while (running) {
+        gusse = window.prompt(`guss number between ${minmumNu} - ${maxNum}`)
+        gusse = Number(gusse)
+        if (isNaN(gusse)) {
+          alert("please enter valid number")
+
+        }
+        else if (gusse < minmumNu || gusse > maxNum) {
+          alert(`please enter the valid number`)
+        }
+        else {
+          attempts++
+          if (gusse > answer) {
+            window.alert(`too highy`)
+          }
+          else if (gusse < answer) {
+            window.alert('too low')
+          } else {
+            window.alert(`correct the answer was ${answer} you try ${attempts} attempts `)
+            if (attempts > 3) {
+              alert("Fail")
+
+            }
+            else {
+              alert("you win the game")
+            }
+            running = false;
+          }
+        }
+
+      }
     }
     function playgame() {
 
@@ -118,8 +155,8 @@ playgame()
           else if (gusse < answer) {
             window.alert('too low')
           } else {
-            window.alert(`lakkofsichii : ${answer} ture si'a ${attempts } yaalte `)
-              if (attempts > 3) {
+            window.alert(`correct the answer was ${answer} you try ${attempts} attempts `)
+            if (attempts > 3) {
               alert("Fail")
 
             }
@@ -132,6 +169,8 @@ playgame()
 
       }
     }
+
+
 
   </script>
 </body>
