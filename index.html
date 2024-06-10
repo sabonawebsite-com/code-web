@@ -97,7 +97,8 @@ playgame()
       let gusse;
       let running = true
       while (running) {
-        gusse = window.prompt(`tilmaamii  ${minmumNu} - ${maxNum} giddu `)
+        gusse = document.querySelector('h3').innerHTML = `guss number between ${minmumNu} - ${maxNum}`
+
         gusse = Number(gusse)
         if (isNaN(gusse)) {
           alert("please enter valid number")
@@ -114,13 +115,13 @@ playgame()
           else if (gusse < answer) {
             window.alert('too low')
           } else {
-            window.alert(`lakkofsichii  ${answer} ture si'a ${attempts} yaalte `)
+            window.alert(`correct the answer was ${answer} you try ${attempts} attempts `)
             if (attempts > 3) {
-              alert("Carraa 3 sadii booda hin badhaafamtuu")
+              alert("Fail")
 
             }
             else {
-              alert(guyyaa sadii booda nii egala galatoma! share for your friends")
+              alert("you win the game")
             }
             running = false;
           }
@@ -139,7 +140,7 @@ playgame()
       let gusse;
       let running = true
       while (running) {
-        gusse = window.prompt(`tilmaamii  ${minmumNu} - ${maxNum} giddu `)
+        gusse = window.prompt(`guss number between ${minmumNu} - ${maxNum}`)
         gusse = Number(gusse)
         if (isNaN(gusse)) {
           alert("please enter valid number")
@@ -156,13 +157,13 @@ playgame()
           else if (gusse < answer) {
             window.alert('too low')
           } else {
-            window.alert(`lakkofsichii  ${answer} ture si'a ${attempts} yaalte `)
+            window.alert(`correct the answer was ${answer} you try ${attempts} attempts `)
             if (attempts > 3) {
-              alert("Carraa 3 sadii booda hin badhaafamtuu")
+              alert("Fail")
 
             }
             else {
-              alert("guyyaa sadii booda egala gaalatoma!")
+              alert("you win the game")
             }
             running = false;
           }
@@ -170,6 +171,8 @@ playgame()
 
       }
     }
+
+
 
 
 
