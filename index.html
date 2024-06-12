@@ -4,91 +4,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tapha</title>
+  <title>Play this👇 </title>
 </head>
 <style>
-  img {
-    width: 350px;
+  .game {
+    display: flex;
+
+    gap: 30px;
+    align-items: center;
+    width: 200px;
+
   }
 
-  fieldset {
-    background-color: rgb(192, 185, 199);
-    width: 400px;
-  }
-
-  li {
-    font-size: 40px;
-    color: rgb(255, 0, 30);
-  }
-
-  p {
+  h1 {
     font-size: 20px;
-    color: blue;
+    color: rgb(238, 8, 81);
+    background-color: rgb(161, 161, 177);
+    width: 80px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left,
+  .center,
+  .right {
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid green;
+    align-items: center;
+    padding: 20px 8px;
+  }
+
+  .size {
+    width: 150px;
+    align-items: center;
   }
 
   button {
-    background-color: red;
+    background-color: green;
     color: white;
+    padding: 10px 10px;
+    border-radius: 50px;
     border: none;
     font-size: 20px;
-    border-radius: 20px;
-     padding: 4px;
-   margin: 10px;
+    font-weight: 500;
   }
 
   button:hover {
-    background: rgb(0, 255, 115);
+    background-color: rgb(135, 221, 135);
+    color: rgb(193, 20, 83);
+    padding: 3px 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
   }
-    a{
+
+  .tapha {
+    width: 300px;
+    align-items: center;
+    align-content: center;
+  }
+
+  a {
+    text-decoration: none;
     outline: none;
+  }
+
+  @media(max-width:768) {
+    .game {
+      width: 100px;
+    }
   }
 </style>
 
 <body>
-  <h1>tapha birri argamsiisu taphadhuu</h1>
+  <h1 class="tapha">play with your friends</h1>
+  <div class="game">
 
- <button onclick="doSub() ">cardii abba 10 yaali</button>
-  <button onclick="
-playgame() 
-  ">cardii abba 5 yaali</button>
-  <br>
- <button><a href="https://www.youtube.com/results?search_query=sabona+marara">ass tuqii</a></button> 
-  <div>
+    <div class="left">
+      <img src="images/5.jpeg" alt="" class="size"><br>
+      <h1>card 5</h1>
+      <button onclick="
+      playgame() 
+        ">Play Now</button>
+
+    </div>
+    <div class="center">
+      <img src="images/10.jpeg" alt="" class="size">
+      <h1>card 10</h1>
+      <button onclick="doSub() ">Play Now</button>
+    </div>
+    <div class="right">
+      <img src="images/200.jpeg" alt="" class="size">
+      <h1>lottery</h1>
+      <button><a href="register.html">Register Now</a></button>
+    </div>
 
   </div>
-  <hr>
-  <div>
-    <p>fruties</p>
-    <ul><br>
-      <fieldset>
-        <li>oreng</li>
-        <p>2 birr</p><button>bitadhu</button><img src="photo/lemon.jpeg" alt="oreng">
-      </fieldset>
-      <br>
-      <fieldset>
-        <li>banana</li>
-        <p>5 birr</p><button>bitadhuu</button>
-        <img src="photo/bana.jpeg" alt="oreng"><br>
-      </fieldset>
-      <br>
-      <fieldset>
-        <li>cabeggies</li>
-        <p>10 birr</p><button>bitadhuu</button><img src="photo/cab.jpeg" alt="oreng">
-      </fieldset>
-      <br>
-      <fieldset>
-        <li>apple</li>
-        <p>15 birr</p><button>bitadhuu</button><img src="photo/apple.jpeg" alt="apple">
-      </fieldset>
-      <br>
-      <fieldset>
-        <li>pinapple</li>
-        <p>20 birr</p><button>bitadhuu</button><img src="photo/pinap.jpeg" alt="oreng">
-      </fieldset><br>
-    </ul>
-  </div>
+  <button><a href="https://www.youtube.com/results?search_query=sabona+marara"> subscribe</a></button>
   <script>
-function doSub() {
+    function doSub() {
       let minmumNu = 1;
       let maxNum = 15;
       let answer = Math.floor(Math.random() * (maxNum - minmumNu + 1)) + minmumNu;
@@ -109,12 +124,12 @@ function doSub() {
         else {
           attempts++
           if (gusse > answer) {
-            window.alert(`too highy`)
+            window.alert(`isaa Gadii`)
           }
           else if (gusse < answer) {
-            window.alert('too low')
+            window.alert('isaa ol')
           } else {
-            window.alert(`correct the answer was ${answer} you try ${attempts} attempts `)
+            window.alert(`lakkofsichii :${answer} ture ${attempts} yaalte `)
             if (attempts > 3) {
               alert("carraa 3 booda hin badhaafamtuu")
 
@@ -151,18 +166,18 @@ function doSub() {
         else {
           attempts++
           if (gusse > answer) {
-            window.alert(`too highy`)
+            window.alert(`isaa Gadii`)
           }
           else if (gusse < answer) {
-            window.alert('too low')
+            window.alert('isaa ol')
           } else {
-            window.alert(`correct the answer was ${answer} you try ${attempts} attempts `)
+            window.alert(`lakkofsichii :${answer} ture ${attempts} yaalte `)
             if (attempts > 3) {
-         alert("carraa 3 booda hin badhaafamtuu")
+              alert("carraa 3 booda hin badhaafamtuu")
 
             }
             else {
-              alert("mo'atteta : guyya sadii booda egala taphinii")
+              alert("mo'atteta : guyya lama booda egala taphinii")
             }
             running = false;
           }
@@ -171,10 +186,8 @@ function doSub() {
       }
     }
 
-
-
-
   </script>
+
 </body>
 
 </html>
