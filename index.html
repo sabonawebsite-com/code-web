@@ -257,7 +257,7 @@
         .then(async (response) => {
           let json = await response.json();
           if (response.status == 200) {
-            result.innerHTML = "Form submitted successfully";
+            result.innerHTML = "successfully you are registered we send your card number";
           } else {
             console.log(response);
             result.innerHTML = json.message;
