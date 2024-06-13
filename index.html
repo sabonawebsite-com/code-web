@@ -8,7 +8,7 @@
 </head>
 <style>
   .game {
-    display: flex;
+   
 
     gap: 30px;
     align-items: center;
@@ -28,6 +28,7 @@
   .left,
   .center,
   .right {
+    gap: 30px;
     width: 200px;
     border-radius: 10px;
     border: 1px solid green;
@@ -40,19 +41,28 @@
     align-items: center;
   }
 
-  button {
-    background-color: green;
-    color: white;
+  .subscribe {
+    background-color: red;
+   color: white;
     padding: 10px 10px;
     border-radius: 50px;
     border: none;
     font-size: 20px;
     font-weight: 500;
+    gap: 10px;
   }
 
-  button:hover {
-    background-color: rgb(135, 221, 135);
-    color: rgb(193, 20, 83);
+  .subscribe:hover {
+   background-color: rgb(195, 43, 43);
+   color: white;
+    padding: 3px 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+  }
+  button{
+    background-color: green;
+    color: white;
     padding: 3px 10px;
     margin: 5px;
     border-radius: 10px;
@@ -63,11 +73,13 @@
     width: 300px;
     align-items: center;
     align-content: center;
+    gap: 30px;
   }
 
   a {
     text-decoration: none;
     outline: none;
+    color: white;
   }
     .contact {
 
@@ -112,6 +124,7 @@
     padding: 10px 5px;
     border-radius: 10px;
 }
+
 </style>
 
 <body>
@@ -126,23 +139,24 @@
         ">Play Now</button>
 
     </div>
+    <br>
+    <br>
     <div class="center">
       <img src="images/10.jpeg" alt="" class="size">
       <h1>card 10</h1>
       <button onclick="doSub() ">Play Now</button>
     </div>
-    <button><a href="https://www.youtube.com/results?search_query=sabona+marara"> subscribe</a></button>
+  <div class="lottery">
 
- 
- 
-    <div class="lottery">
-      <img src="images/200.jpeg" alt="" class="size">
-      <h1>lottery</h1>
-      <button><a href="register.html">Register Now</a></button>
-    </div>
-      
+  
+    <button class="subscribe"><a href="https://www.youtube.com/results?search_query=sabona+marara"> subscribe</a></button><br><br>
+  <div class="contact ">
+    <h1>lottery</h1>
 
-  <<div class="contact ">
+      <button>Register Now</button>
+        <img src="images/200.jpeg" alt="" class="size">
+     
+     
     <form class="form-contener" method="POST" id="form">
         <input class="" type="hidden" name="access_key" value="fb157278-c020-42dd-bd36-1f503b4fd21b">
         <label for="name">Your Full Name</label>
@@ -155,7 +169,9 @@
         <button class="form-button" type="submit">Submit Form</button>
         <div id="result"></div>
       </form>
-        </div>
+    </div>
+    </div>
+        
   <script>
     function doSub() {
       let minmumNu = 1;
