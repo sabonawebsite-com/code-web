@@ -124,6 +124,77 @@
     padding: 10px 5px;
     border-radius: 10px;
 }
+  body{
+    border: 1px solid #008000;
+    text-align: center;
+    padding: 20px;
+    background-color: bisque;
+    color: red;
+    
+}
+input{
+    font-size :30px;
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
+}
+button{
+    background-color: #008000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    margin: auto;
+}
+button:hover{
+    background-color: #bee0be;
+   
+}
+.continer{
+    display: grid;
+    grid-template-columns: repeat(1fr 1fr 1fr);
+    margin-top: 10px;
+    
+}
+.dhibba-tokko{
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid rgb(248, 86, 6);
+    background-color: blue;
+    color: white;
+    align-items: center;
+    border-radius:20px;
+}
+.Dhibba-lam{
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid purple;
+    background-image: url();
+    background-color: #e91b8c;
+    color: rgb(246, 242, 244); 
+    align-items: center;
+    border-radius:20px;
+}
+.shantama{
+    border-radius:20px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid purple;
+    background-color: red;
+    color: rgb(246, 239, 244);
+    align-items: center;
+}
+p{
+    font-size: 30px;
+    color:white;
+    font-weight: bold;
+    
+}
+
 
 </style>
 
@@ -171,6 +242,26 @@
       </form>
     </div>
     </div>
+    <div class="continer">
+    <div class="Dhibba-lam">
+    <h1>Abba Dhibba Lama</h1><br>
+    <input type="number" name="Lama" id="Dhibbalama" placeholder="kuma meeqa?">
+    <button onclick="jijjira();">Nii Ta'a</button>
+    <p id="resualt"></p>
+</div>
+<div class="dhibba-tokko">
+    <h1>Abba Dhibba Tokko</h1><br>
+    <input type="number" name="DhibbaTokko" id="Dhibbatokko" placeholder="kuma meeqa?">
+    <button onclick="jijjira1();">Nii Ta'a</button>
+    <p id="resualt1"></p>
+</div>
+<div class="shantama">
+    <h1>Abba  Shantama</h1><br>
+    <input type="number" name="Shantama" id="shantama" placeholder="kuma meeqa?">
+    <button onclick="jijjira2();">Nii Ta'a</button>
+    <p id="resualt2"></p>
+</div>
+
         
   <script>
     function doSub() {
@@ -292,6 +383,28 @@
           }, 3000);
         });
     });
+      
+function jijjira(){
+    let Dhibbalama=document.getElementById("Dhibbalama").value;
+    resualt=Number(Dhibbalama)
+ let  change=Dhibbalama/200;
+ console.log(change)
+ document.getElementById("resualt").innerHTML=`Abbaa dhibba Lama ${change} lakkaawadhuu `;
+}
+function jijjira1(){
+    let Dhibbatokko=document.getElementById("Dhibbatokko").value;
+    resualt=Number(Dhibbatokko)
+ let  change=Dhibbatokko/100;
+ console.log(change)
+ document.getElementById("resualt1").innerHTML=`Abbaa Dhibba tokko ${change} lakkaawadhuu `;
+}
+function jijjira2(){
+    let shantama=document.getElementById("shantama").value;
+    resualt=Number(shantama)
+ let  change=shantama/50;
+ console.log(change)
+ document.getElementById("resualt2").innerHTML=`Abbaa shantama ${change} lakkaawadhuu `;
+}
 
   </script>
 
