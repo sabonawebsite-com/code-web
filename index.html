@@ -203,6 +203,61 @@ p{
 </style>
 
 <body>
+
+
+      <div id="formContainer" class="container" >
+        <h1>Badge Generator</h1>
+        <form id="badgeForm">
+
+            <label for="eventname">Your Name</label>
+            <input type="text" id="eventname" required>
+
+            <label for="name">Department:</label>
+            <input type="text" id="name" required>
+
+            <label for="designation"> Your ID</label>
+            <input type="text" id="designation" required>
+
+            <label for="company">Phone Number</label>
+            <input type="text" id="company" required>
+
+            <label for="access">Code of caffe</label>
+            <select  id="access" required>
+                <option value="Attendee">Worker</option>
+                <option value="VIP">Student</option>
+            </select>
+
+            <button type="submit">Generate ID</button>
+
+        </form>
+    </div>
+
+    <div id="badge" class="badge">
+        <div class="badge-header">
+            <h1 id="badgeEvent"></h1>
+        </div>
+        <div class="badge-body">
+            <h2 id="badgeName"></h2>
+            <p id="badgeDesignation"></p>
+            <h3 id="badgecontainer"></h3>
+        </div>
+
+        <div id="qrcode" class="badge-qr"></div>
+
+        <div class="badge-footer">
+            <p id="badgeAccess">Student</p>
+        </div>
+
+    </div>
+
+    <button id="dwnBadge" class="dwnBadge">Download ID</button>
+    <button id="createAnother" class="createAnother">Create ID</button>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.js"></script>
   <h1 class="tapha">play with your friends</h1>
   <div class="game">
 
