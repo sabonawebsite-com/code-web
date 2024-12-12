@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .counter{
+        display: flex;
+        font-size: 26px;
+        background-color: black;
+        color: white;
+        width: 100px;
+    }
+    button{
+        font-size: 29px;
+        padding: 10px 20px;
+        gap: 20px;
+    }
+    #reset{
+        background-color: red;
+        color: white;
+    }
+    #reset:hover{
+        background-color: rgb(224, 155, 155);
+        
+    }
+    h3{
+        font-size: 30px;
+        background-color: red;
+        color: white;
+        width: 40px;
+        padding: 20px 10px;
+        align-items: center;
+    }
+    #Order{
+        background-color: green;
+        color: white;
+        font-size: 25px;
+        width: 200px;
+        padding: 20px 10px;
+    }
+    #getPrice{
+        background-color: black;
+        color: white;
+    }
+    #getPrice:hover{
+        background-color: rgb(80, 77, 77);
+    }
+    body{
+        border: 1px solid;
+        width: 370px;
+        padding: 10px 20px;
+    }
+    .image{
+        width: 100px;
+        display: flex;
+        gap: 100px;
+
+    }
+    img{
+        width: 100px;
+    }
+</style>
+<body>
+    <div class="image">
+    <h1>This Dog is hunter classic</h1>
+    <img src="my_dog.png" alt="">
+</div>
+    <h3 id="result">0️⃣</h3>
+    <h2 id="Order">price Of banana:</h2>
+    <div class="counter">
+    <button onclick="doPlus();" id="plus">➕</button>
+  
+    <button onclick="doMinus()" id="minus">➖</button>
+    <button onclick="doReset()" id="reset">reset</button>
+   
+    <button id="getPrice" onclick="doOrder()">get Price</button>
+    <script>
+        let plus = 0;
+        function doPlus(){
+            plus=document.getElementById("result").innerHTML=plus+=1
+        }
+        function doMinus(){
+            plus=document.getElementById("result").innerHTML=plus-=1
+        }
+        function doOrder(){
+            plus=document.getElementById("Order").innerHTML=`Total:$${plus*5}`;
+        }
+        function doReset(){
+            plus=document.getElementById("result").innerHTML=0;
+            plus=document.getElementById("Order").innerHTML=0;
+        }
+    </script>
+</div>
+    
+</body>
+</html>
