@@ -8,196 +8,139 @@
 </head>
 <style>
  
-  .game {
-   
+  /* General Styles */  
+body {  
+  border: 1px solid #008000;  
+  text-align: center;  
+  padding: 20px;  
+  background-color: bisque;  
+  color: red;  
+  font-family: Arial, sans-serif;  
+}  
 
-    gap: 30px;
-    align-items: center;
-    width: 200px;
+h1 {  
+  font-size: 24px;  
+  color: rgb(238, 8, 81);  
+  background-color: rgb(161, 161, 177);  
+  padding: 10px;  
+  border-radius: 5px;  
+}  
 
-  }
-  .soonaa{
-    color:red
-    font-size: 20px;
-  }
+p {  
+  font-size: 30px;  
+  color: white;  
+  font-weight: bold;  
+}  
 
-  h1 {
-    font-size: 20px;
-    color: rgb(238, 8, 81);
-    background-color: rgb(161, 161, 177);
-    width: 80px;
-    align-items: center;
-    text-align: center;
-  }
+/* Game Layout */  
+.game {  
+  display: flex;  
+  justify-content: space-around;  
+  margin: 20px 0;  
+}  
 
-  .left,
-  .center,
-  .right {
-    gap: 30px;
-    width: 200px;
-    border-radius: 10px;
-    border: 1px solid green;
-    align-items: center;
-    padding: 20px 8px;
-  }
+.left,  
+.center {  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  width: 200px;  
+  border-radius: 10px;  
+  border: 1px solid green;  
+  padding: 20px;  
+  background-color: rgba(255, 255, 255, 0.9);  
+}  
 
-  .size {
-    width: 150px;
-    align-items: center;
-  }
+img.size {  
+  width: 150px;  
+  height: auto;  
+  border-radius: 10px;  
+}  
 
-  .subscribe {
-    background-color: red;
-   color: white;
-    padding: 10px 10px;
-    border-radius: 50px;
-    border: none;
-    font-size: 20px;
-    font-weight: 500;
-    gap: 10px;
-  }
+/* Buttons */  
+button {  
+  background-color: #008000;  
+  color: white;  
+  padding: 10px 20px;  
+  border: none;  
+  border-radius: 20px;  
+  font-size: 20px;  
+  cursor: pointer;  
+  transition: background-color 0.3s;  
+}  
 
-  .subscribe:hover {
-   background-color: rgb(195, 43, 43);
-   color: white;
-    padding: 3px 10px;
-    margin: 5px;
-    border-radius: 10px;
-    border: none;
-  }
-  button{
-    background-color: green;
-    color: white;
-    padding: 3px 10px;
-    margin: 5px;
-    border-radius: 10px;
-    border: none;
-  }
+button:hover {  
+  background-color: #bee0be;  
+}  
 
-  .tapha {
-    width: 300px;
-    align-items: center;
-    align-content: center;
-    gap: 30px;
-  }
+.subscribe {  
+  background-color: red;  
+  color: white;  
+  padding: 10px 10px;  
+  border-radius: 50px;  
+  border: none;  
+  font-size: 20px;  
+  cursor: pointer;  
+}  
 
-  a {
-    text-decoration: none;
-    outline: none;
-    color: white;
-  }
-    .contact {
+.subscribe:hover {  
+  background-color: rgb(195, 43, 43);  
+}  
 
+/* Lottery Section */  
+.contact {  
+  border: 1px solid purple;  
+  padding: 20px 10px;  
+  width: 400px;  
+  margin: 20px auto;  
+  text-align: center;  
+  border-radius: 10px;  
+  background-color: rgba(255, 255, 255, 0.9);  
+}  
 
-  align-items: center;
-  justify-content: space-between;
-  border: 1px solid purple;
-  padding: 20px 10px;
-  width: 400px;
-  text-align: center;
-}
-.form-contener input{
-   border: none;
-   outline: none;
-   border: 1px solid green;
-    padding: 6px 2px;
-    margin: auto;
-    gap: 20px;
-    font-size: 18px;
-}
-.form-contener label{
- color: rgb(251, 4, 4);
-    padding: 6px 2px;
-    margin: auto;
-    gap: 20px;
-    font-size: 20px;
-    margin-right: 10px;
-}
-.form-button{
-    background-color: rgb(4, 37, 248);
-    color: white;
-    border: 1px solid red;
-    border: none;
-    padding: 10px 5px;
-    border-radius: 10px;
-}
-.form-button:hover{
-    background-color: rgb(134, 179, 134);
-    color: white;
-    border: 1px solid rgb(214, 53, 53);
-    border: none;
-    padding: 10px 5px;
-    border-radius: 10px;
-}
-  body{
-    border: 1px solid #008000;
-    text-align: center;
-    padding: 20px;
-    background-color: bisque;
-    color: red;
-    
-}
-input{
-    font-size :30px;
-    font-weight: bold;
-    width: 200px;
-    height: 50px;
-}
-button{
-    background-color: #008000;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    font-size: 20px;
-    margin: auto;
-}
-button:hover{
-    background-color: #bee0be;
-   
-}
-.continer{
-    display: grid;
-    grid-template-columns: repeat(1fr 1fr 1fr);
-    margin-top: 10px;
-    
-}
-.dhibba-tokko{
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border: 1px solid rgb(248, 86, 6);
-    background-color: blue;
-    color: white;
-    align-items: center;
-    border-radius:20px;
-}
-.Dhibba-lam{
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border: 1px solid purple;
-    background-image: url();
-    background-color: #e91b8c;
-    color: rgb(246, 242, 244); 
-    align-items: center;
-    border-radius:20px;
-}
-.shantama{
-    border-radius:20px;
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border: 1px solid purple;
-    background-color: red;
-    color: rgb(246, 239, 244);
-    align-items: center;
-}
-p{
-    font-size: 30px;
-    color:white;
-    font-weight: bold;
-    
+/* Form Styles */  
+.form-contener input,  
+.form-contener textarea {  
+  width: calc(100% - 12px); /* Full width with padding */  
+  border: 1px solid green;  
+  padding: 6px;  
+  font-size: 18px;  
+  margin: 10px 0;  
+}  
+
+.form-contener label {  
+  color: rgb(251, 4, 4);  
+  font-size: 20px;  
+}  
+
+.form-button {  
+  background-color: rgb(4, 37, 248);  
+  color: white;  
+  border: none;  
+  padding: 10px 5px;  
+  border-radius: 10px;  
+  cursor: pointer;  
+}  
+
+.form-button:hover {  
+  background-color: rgb(134, 179, 134);  
+}  
+
+/* Responsive Design */  
+@media (max-width: 600px) {  
+  .game {  
+      flex-direction: column;  
+      align-items: center;  
+  }  
+
+  .left, .center {  
+      width: 90%;  
+      margin-bottom: 20px;  
+  }  
+
+  .contact {  
+      width: 90%;  
+  }  
 }
 
 
@@ -244,8 +187,8 @@ p{
         <input class="name-user " type="text" name="name" required placeholder="Your Name"><br><br>
         <label for="email">Your Email</label><br>
         <input class="you-email" type="email" name="email" required placeholder="Your Email"><br><br>
-        <label for="comment">Your Account</label><br>
-        <textarea class="form-text" name="message" required placeholder="Your Account"></textarea><br><br>
+        <label for="comment">Comment</label><br>
+        <textarea class="form-text" name="message" required placeholder="comment"></textarea><br><br>
         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
         <button class="form-button" type="submit">Submit Form</button>
         <div id="result"></div>
@@ -282,19 +225,19 @@ p{
       let gusse;
       let running = true
       while (running) {
-        gusse = window.prompt(`guss number between ${minmumNu} - ${maxNum}`)
+        gusse = window.prompt(`Tilmaamii ${minmumNu} - ${maxNum} giduu`)
         gusse = Number(gusse)
         if (isNaN(gusse)) {
-          alert("please enter valid number")
+          alert("Lakkofsa sirrii galchi maloo")
 
         }
         else if (gusse < minmumNu || gusse > maxNum) {
-          alert(`please enter the valid number`)
+          alert(`Lakkofsa sirrii galchi maloo`)
         }
         else {
           attempts++
           if (gusse > answer) {
-            window.alert(`isaa Gadii`)
+            window.alert(`isaa Gadi`)
           }
           else if (gusse < answer) {
             window.alert('isaa ol')
@@ -324,19 +267,19 @@ p{
       let gusse;
       let running = true
       while (running) {
-        gusse = window.prompt(`guss number between ${minmumNu} - ${maxNum}`)
+        gusse = window.prompt(`Tilmaamii ${minmumNu} - ${maxNum} Gidu`)
         gusse = Number(gusse)
         if (isNaN(gusse)) {
-          alert("please enter valid number")
+          alert("Lakkofsa sirrii galchi maloo")
 
         }
         else if (gusse < minmumNu || gusse > maxNum) {
-          alert(`please enter the valid number`)
+          alert(`Lakkofsa sirrii galchi maloo`)
         }
         else {
           attempts++
           if (gusse > answer) {
-            window.alert(`isaa Gadii`)
+            window.alert(`isaa Gadi`)
           }
           else if (gusse < answer) {
             window.alert('isaa ol')
@@ -347,7 +290,7 @@ p{
 
             }
             else {
-              alert("🤴mo'atteta : guyya lama booda egala taphinii👏")
+              alert("🤴mo'atteta 👏")
             }
             running = false;
           }
@@ -376,7 +319,7 @@ p{
         .then(async (response) => {
           let json = await response.json();
           if (response.status == 200) {
-            result.innerHTML = "successfully you are registered we send your card number";
+            result.innerHTML = "Galmofteeta✔️";
           } else {
             console.log(response);
             result.innerHTML = json.message;
@@ -384,7 +327,7 @@ p{
         })
         .catch(error => {
           console.log(error);
-          result.innerHTML = "Something went wrong!";
+          result.innerHTML = "Rakkon jira irra debi'ii!";
         })
         .then(function () {
           form.reset();
