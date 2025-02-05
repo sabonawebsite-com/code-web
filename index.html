@@ -199,11 +199,23 @@ button:hover {
       width: 90%;  
   }  
 }
-
+   .unselectable {
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          background-color: #ffffff;
+          padding: 30px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          max-width: 600px;
+          width: 100%;
+        }
 
 </style>
 
 <body>
+      <div class="unselectable">
  <h1 id="timer"></h1>   
 
   <h1 class="tapha">play with your friends</h1>
@@ -279,9 +291,20 @@ button:hover {
     <button onclick="jijjira2();">Nii Ta'a</button>
     <p id="resualt2"></p>
 </div>
-
+    </div>
         
   <script>
+        document.addEventListener('copy', function (e) {
+        e.preventDefault();
+      });
+  
+      document.addEventListener('cut', function (e) {
+        e.preventDefault();
+      });
+  
+      document.addEventListener('paste', function (e) {
+        e.preventDefault();
+      });
 
     // Set the date we're counting down to  
         var countDownDate = new Date("Dec 31, 2024 20:50:59").getTime();  
